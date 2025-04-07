@@ -1,59 +1,4 @@
-/* Side Menu Styles */
-.side-menu {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  background-color: #333;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-}
-
-.side-menu a {
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #fff;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.side-menu a:hover {
-  background-color: #575757;
-}
-
-.side-menu .close-btn {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 30px;
-  color: #fff;
-}
-
-/* Main Content Styles */
-.main-content {
-  transition: margin-left 0.3s ease;
-  padding: 20px;
-}
-
-.menu-btn {
-  font-size: 30px;
-  cursor: pointer;
-  color: #333;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .side-menu {
-    width: 100%;
-    left: -100%;
-  }
-
-  .main-content {
-    margin-left: 0;
-  }
-}
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -63,40 +8,74 @@ body {
   color: #333;
 }
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
 header {
   background: #333;
   color: #fff;
-  padding: 1rem 0;
+  padding: 20px 0;
   text-align: center;
 }
 
-main {
-  padding: 20px;
+header h1 {
+  margin: 0;
 }
 
-section {
-  margin-bottom: 20px;
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-h1, h2 {
-  color: #333;
+nav ul li {
+  display: inline;
+  margin: 0 10px;
 }
 
-a {
-  color: #0073e6;
+nav ul li a {
+  color: #fff;
   text-decoration: none;
 }
 
-a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Main Content Styles */
+main {
+  padding: 20px 0;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Project Styles */
+.project {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
 footer {
-  text-align: center;
-  padding: 10px;
   background: #333;
   color: #fff;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
 }
