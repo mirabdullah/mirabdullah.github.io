@@ -44,3 +44,59 @@ footer {
   bottom: 0;
   width: 100%;
 }
+/* Side Menu Styles */
+.side-menu {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #333;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+}
+
+.side-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.side-menu a:hover {
+  background-color: #575757;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+
+/* Main Content Styles */
+.main-content {
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+}
+
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .side-menu {
+    width: 100%;
+    left: -100%;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
