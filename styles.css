@@ -142,3 +142,29 @@ footer {
     display: none;
   }
 }
+:root {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #00b894;
+}
+
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #0984e3;
+}
+
+/* Apply the theme colors */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Update other color usages too */
+nav, footer, .card {
+  background: var(--bg-color);
+}
+
+a:hover, .btn, .social-icons a:hover {
+  color: var(--accent-color);
+}
