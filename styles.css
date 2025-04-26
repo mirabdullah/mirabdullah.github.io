@@ -12,6 +12,8 @@
 
 /* Apply the theme colors */
 body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
   background: var(--bg-color);
   color: var(--text-color);
 }
@@ -30,13 +32,6 @@ a:hover, .btn, .social-icons a:hover {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background: #121212;
-  color: #ffffff;
 }
 
 a {
