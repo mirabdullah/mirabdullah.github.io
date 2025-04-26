@@ -1,32 +1,20 @@
+/* Root Variables */
 :root {
-  --bg-color: #121212;
+  --bg-color: #000000;
   --text-color: #ffffff;
-  --accent-color: #00b894;
+  --accent-color: #ffd700; /* golden header */
+  --footer-color: #4b0082; /* deep purple footer */
 }
 
+/* Light Mode Overrides */
 .light-mode {
   --bg-color: #ffffff;
-  --text-color: #333333;
-  --accent-color: #0984e3;
+  --text-color: #222222;
+  --accent-color: #b8860b;
+  --footer-color: #9370db;
 }
 
-/* Apply the theme colors */
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background: var(--bg-color);
-  color: var(--text-color);
-}
-
-/* Update other color usages too */
-nav, footer, .card {
-  background: var(--bg-color);
-}
-
-a:hover, .btn, .social-icons a:hover {
-  color: var(--accent-color);
-}
-/* Global styles */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -34,132 +22,117 @@ a:hover, .btn, .social-icons a:hover {
   scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(270deg, #ff0000, #00ff00, #0000ff);
+  background-size: 600% 600%;
+  animation: rgbBackground 15s ease infinite;
+  color: var(--text-color);
+  transition: background 0.5s, color 0.5s;
+  padding-right: 200px;
+}
+
+/* Animated RGB background */
+@keyframes rgbBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Mode toggle button */
+#mode-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: var(--accent-color);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 /* Navigation */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1f1f1f;
-  padding: 1rem 2rem;
-}
-
-nav .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #00b894;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
 }
 
 .nav-links {
   list-style: none;
-  display: flex;
 }
 
 .nav-links li {
-  margin-left: 20px;
+  margin: 20px 0;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .nav-links a:hover {
-  color: #00b894;
+  color: var(--accent-color);
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(to right, #00b894, #0984e3);
+  padding: 100px 20px 50px;
+  color: var(--accent-color);
 }
 
-header h1 {
-  font-size: 2.5rem;
-}
-
-header .highlight {
-  color: #ffeaa7;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin: 20px 0;
-}
-
-.btn {
-  background: #ffffff;
-  color: #0984e3;
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 20px;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #ffeaa7;
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent-color);
+  margin-bottom: 20px;
 }
 
 /* Sections */
 section {
-  padding: 60px 20px;
   text-align: center;
+  padding: 80px 20px;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.card {
-  background: #1f1f1f;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  background: #2d3436;
+h2 {
+  margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
+  background: var(--footer-color);
   text-align: center;
-  padding: 20px;
-  background: #1f1f1f;
+  padding: 30px 20px;
+  margin-top: 50px;
 }
 
 .social-icons {
-  margin: 10px 0;
+  margin-bottom: 15px;
 }
 
 .social-icons a {
   margin: 0 10px;
+  color: var(--text-color);
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #00b894;
+  color: var(--accent-color);
 }
 
 /* Responsive */
 @media(max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  nav .nav-links {
-    flex-direction: column;
-    background: #1f1f1f;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
+  nav {
     display: none;
   }
 }
