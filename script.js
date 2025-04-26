@@ -1,4 +1,3 @@
-// Simple pop-up when clicking the "Contact Me" button
-document.querySelector('.btn').addEventListener('click', function() {
-  alert('Thanks for reaching out!');
-});
+// Placeholder for interactivity (for future expansion)
+// You can add animations or toggle mobile menus later
+console.log("Portfolio loaded successfully!");
